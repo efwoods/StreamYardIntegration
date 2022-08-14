@@ -37,7 +37,8 @@ export default {
       // call api
       // if successful, redirect to page
 
-      DefaultService.getTestJsonReturn()
+      // DefaultService.getTestJsonReturn()
+      DefaultService.getTestJsonLinkedIn(email, password, url)
 
       // .then((response) => {
       //   // console.log('response in comments: ' + JSON.stringify(response.data))

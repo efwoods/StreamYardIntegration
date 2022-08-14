@@ -25,7 +25,7 @@
 
 <script>
 import { useField, useForm } from 'vee-validate'
-// import router from '@/router'
+import router from '@/router'
 import DefaultService from '@/services/DefaultService'
 // import axios from 'axios'
 export default {
@@ -38,7 +38,14 @@ export default {
       // if successful, redirect to page
 
       // DefaultService.getTestJsonReturn()
+      let email = 'e.woods.business@icloud.com'
+      let password = 'refsac-rivxyw-veGhi6'
+      let url =
+        'https://www.linkedin.com/video/event/urn:li:ugcPost:6947278127282675712/'
       DefaultService.getTestJsonLinkedIn(email, password, url)
+      router.push({
+        name: 'CommentsVue',
+      })
 
       // .then((response) => {
       //   // console.log('response in comments: ' + JSON.stringify(response.data))

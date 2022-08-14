@@ -64,9 +64,8 @@ export default {
   },
 
   getTestJsonLinkedIn(email, password, url) {
-    // console.log('input vars: ' + email + ', ' + password + ', ' + url)
     let queryURL =
-      'localhost:8081/scrape' +
+      'http://localhost:8081/scrape' +
       '?url=' +
       url +
       '&username=' +
@@ -74,26 +73,15 @@ export default {
       '&password=' +
       password
 
-    axios
-      .get(queryURL)
-      .then(() => {
-        // Perform Success Action
-        // let temp = JSON.stringify(res.data)
-        // console.log('res success: ' + JSON.stringify(res.data))
-        console.log('success')
-        router.push({
-          name: 'CommentsVue',
-        })
-      })
-      .catch((error) => {
-        //error.response.status
-        console.log('Error', error)
-      })
-      .finally(() => {
-        //Perform action in always
-        console.log('default service called')
-      })
+    axios.get(queryURL)
   },
+
+  async getComments() {
+    return await axios.get('http://localhost:8081/comments').then((res) => {
+      console.log('comments: ' + res.data)
+    })
+  },
+
   sendForm() {
     // add 'e' as an input to detect errors
     //Pseudocode for error checking

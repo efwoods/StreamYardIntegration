@@ -1,25 +1,11 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/Carmack_Interview_Lex_Fridman_Podcast.jpg"
-  />
-  <LoginForm />
-  <DefaultVue></DefaultVue>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import DefaultVue from './components/default/DefaultVue.vue'
-import LoginForm from './views/default/LoginForm.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
-    DefaultVue,
-    LoginForm,
-  },
+  components: {},
   props: {},
 }
 </script>

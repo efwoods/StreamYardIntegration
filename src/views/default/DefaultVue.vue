@@ -55,11 +55,11 @@
 </template>
 
 <script>
-import BaseInput from './BaseInput.vue'
-import BaseCheckbox from './BaseCheckbox.vue'
-import BaseRadio from './BaseRadio.vue'
+import BaseInput from '../../components/default/BaseInput.vue'
+import BaseCheckbox from '../../components/default/BaseCheckbox.vue'
+import BaseRadio from '../../components/default/BaseRadio.vue'
 import DefaultService from '@/services/DefaultService'
-import BaseButton from './BaseButton.vue'
+import BaseButton from '../../components/default/BaseButton.vue'
 
 export default {
   name: 'DefaultVue',

@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import router from './router'
 
 const requireComponent = require.context(
   './components/default',
@@ -9,7 +10,7 @@ const requireComponent = require.context(
   /Base[A-Z]\w+\.(vue|js)$/
 )
 
-const app = createApp(App)
+const app = createApp(App).use(router)
 
 requireComponent.keys().forEach((fileName) => {
   const componentConfig = requireComponent(fileName)

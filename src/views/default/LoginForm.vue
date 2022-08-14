@@ -25,13 +25,43 @@
 
 <script>
 import { useField, useForm } from 'vee-validate'
+// import router from '@/router'
+import DefaultService from '@/services/DefaultService'
+// import axios from 'axios'
 export default {
   name: 'LoginForm',
   setup() {
     function onSubmit() {
       alert('Submitted')
+
+      // call api
+      // if successful, redirect to page
+
+      DefaultService.getTestJsonReturn()
+
+      // .then((response) => {
+      //   // console.log('response in comments: ' + JSON.stringify(response.data))
+      //   if (response.data) {
+      //     console.log('response.data:' + response.data)
+      //   } else {
+      //     console.log('response data err: ' + response.data)
+      //   }
+      //   this.jsonResponse = response.data
+      // })
     }
+
     const validations = {
+      url: (value) => {
+        console.log(value)
+        if (value == '') return 'This field is required'
+
+        const regex =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        if (!regex.test(String(value).toLowerCase())) {
+          return 'Please enter a valid url'
+        }
+        return true
+      },
       email: (value) => {
         if (!value) return 'This field is required'
 
@@ -57,6 +87,7 @@ export default {
     const { value: email, errorMessage: emailError } = useField('email')
     const { value: password, errorMessage: passwordError } =
       useField('password')
+    const { value: url, errorMessage: urlError } = useField('url')
 
     return {
       onSubmit,
@@ -64,6 +95,8 @@ export default {
       emailError,
       password,
       passwordError,
+      url,
+      urlError,
     }
   },
   created() {},

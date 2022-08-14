@@ -3,6 +3,7 @@ import LoginForm from '@/views/default/LoginForm.vue'
 import App from '@/App.vue'
 import DefaultVue from '@/views/default/DefaultVue.vue'
 import HelloWorld from '@/views/default/HelloWorld.vue'
+import CommentsVue from '@/views/Comments.vue'
 
 const routes = [
   {
@@ -19,12 +20,18 @@ const routes = [
     path: '/helloworld',
     name: 'HelloWorld',
     component: HelloWorld,
-    props: { msg: 'Welcome to Your Vue.js App' },
+    props: true,
   },
   {
     path: '/login',
     name: 'LoginForm',
     component: LoginForm,
+  },
+  {
+    path: '/comments',
+    name: 'CommentsVue',
+    component: CommentsVue,
+    props: true,
   },
 ]
 

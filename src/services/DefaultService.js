@@ -1,4 +1,5 @@
 import axios from 'axios'
+import router from '@/router'
 
 const apiClient = axios.create({
   baseURL: 'https://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3',
@@ -24,6 +25,41 @@ export default {
       })
       .catch(function (err) {
         console.log('Error', err)
+      })
+  },
+  // getTestJsonReturn() {
+  //   axios
+  //     .get('https://efwoods.github.io/json-server/db.json')
+  //     .then(function (response) {
+  //       console.log('Response', response)
+  //     })
+  //     .catch(function (err) {
+  //       console.log('Error', err)
+  //     })
+  // },
+  getTestJsonReturn() {
+    // console.log('input vars: ' + email + ', ' + password + ', ' + url)
+    axios
+      .get('https://efwoods.github.io/json-server/db.json')
+      .then((res) => {
+        // Perform Success Action
+        let temp = JSON.stringify(res.data)
+        // console.log('res success: ' + JSON.stringify(res.data))
+
+        router.push({
+          name: 'CommentsVue',
+          params: {
+            json: temp,
+          },
+        })
+      })
+      .catch((error) => {
+        //error.response.status
+        console.log('Error', error)
+      })
+      .finally(() => {
+        //Perform action in always
+        console.log('default service called')
       })
   },
   sendForm() {

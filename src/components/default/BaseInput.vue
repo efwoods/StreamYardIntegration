@@ -11,7 +11,7 @@
     @input="$emit('update:modelValue', $event.target.value)"
     :id="uuid"
     :aria-describedby="error ? `${uuid}-error` : false"
-    :aria-invalid="error ? true : false"
+    :aria-invalid="error ? true : null"
   />
 
   <BaseErrorMessage v-if="error" :id="`${uuid}-error`">

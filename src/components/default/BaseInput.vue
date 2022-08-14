@@ -1,5 +1,7 @@
 <template>
-  <label :for="uuid" v-if="label">{{ label }}</label>
+  <div>
+    <label :for="uuid" v-if="label">{{ label }}</label>
+  </div>
   <input
     class="field"
     v-bind="{ ...$attrs, onInput: updateValue }"

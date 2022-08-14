@@ -1,14 +1,24 @@
 <template>
   <form @submit.prevent="onSubmit">
-    <BaseInput label="Email" type="email" v-model="email" :error="emailError" />
-
-    <BaseInput
-      label="Password"
-      type="password"
-      v-model="password"
-      :error="passwordError"
-    />
-
+    <div>
+      <BaseInput label="URL" type="url" v-model="url" :error="urlError" />
+    </div>
+    <div>
+      <BaseInput
+        label="Email"
+        type="email"
+        v-model="email"
+        :error="emailError"
+      />
+    </div>
+    <div>
+      <BaseInput
+        label="Password"
+        type="password"
+        v-model="password"
+        :error="passwordError"
+      />
+    </div>
     <BaseButton type="submit" class="-fill-gradient"> Submit </BaseButton>
   </form>
 </template>

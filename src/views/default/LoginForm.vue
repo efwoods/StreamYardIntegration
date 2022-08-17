@@ -14,7 +14,7 @@
     <div>
       <BaseInput
         label="Password"
-        type="password"
+        type="email"
         v-model="password"
         :error="passwordError"
       />

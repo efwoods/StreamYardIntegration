@@ -1,7 +1,5 @@
 <template>
   <div>Comments</div>
-  <!-- <p v-if="jsonResponse">{{ jsonResponse }}</p> -->
-
   <p v-if="json">{{ this.json }}</p>
 </template>
 
@@ -15,28 +13,6 @@ export default {
     // DefaultService.getComments()
     this.fetchAPI()
   },
-
-  // .then((res) => {
-
-  //   // Perform Success Action
-  //   this.json = JSON.stringify(res.data)
-  //   // console.log('res success: ' + JSON.stringify(res.data))
-
-  //   // router.push({
-  //   //   name: 'CommentsVue',
-  //   //   params: {
-  //   //     json: temp,
-  //   //   },
-  //   // })
-  // })
-  // .catch((error) => {
-  //   //error.response.status
-  //   console.log('Error', error)
-  // })
-  // .finally(() => {
-  //   //Perform action in always
-  //   console.log('default service called')
-  // })
 
   data() {
     setInterval(this.fetchAPI, 1000)

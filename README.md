@@ -3,6 +3,9 @@ This integration enables a LinkedIn user to display comments on their screen whi
 
 ![alt text](https://github.com/efwoods/StreamYardIntegration/blob/main/src/assets/Proof-of-Concept.png)
 
+## Prerequisites
+This frontend runs in conjunction with a [Text-Scraper](https://github.com/efwoods/Text-Scraper/).
+
 ## How to add StreamYard comments to your stream in under 10 steps!
 1. Start OBS
 2. Open a full screen preview of your OBS scene in a separate window.

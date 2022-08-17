@@ -23,7 +23,7 @@ There is no data being stored on any server or in the code. Any use of usernames
 
 ## Project MileStones
 This project will continue to reach the following milestones:
-1. Deployment to a cloudhosted environment
+1. Deployment to a cloud-hosted environment
 2. Https-certified endpoint security
 3. Support for 2fa verification 
 4. New Themes and Styling for comments

@@ -22,7 +22,7 @@ This frontend runs in conjunction with a [Text-Scraper](https://github.com/efwoo
 That's it! Comments will now display on your StreamYard Stream in real time!
 
 ## Is the StreamYard Integration safe to use?
-There is no data being stored on any server or in the code. Any use of usernames, passwords, and comments are ephemoral. 
+There is no data being stored on any server or in the code. Any use of usernames, passwords, and comments are ephemoral. However, use this software at your own risk.
 
 ## Project MileStones
 This project will continue to reach the following milestones:
